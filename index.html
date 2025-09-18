@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Excel → JSON</title>
+<link rel="stylesheet" href="style.css">
+<!-- SheetJS via CDN (you can download and serve locally if you prefer) -->
+<script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+<main class="container">
+<h1>Excel → JSON Converter</h1>
+
+
+<div id="drop-zone" class="drop-zone">
+<p>Kéo thả file Excel vào đây hoặc <label class="file-label">chọn file<input id="file-input" type="file" accept=".xlsx, .xls" /></label></p>
+</div>
+
+
+<div class="controls">
+<button id="convert-btn" disabled>Convert</button>
+<button id="download-btn" disabled>Download JSON</button>
+<select id="sheet-select" style="display:none"></select>
+<label><input type="checkbox" id="header-first-row" checked /> Dòng đầu là header</label>
+</div>
+
+
+<section>
+<h2>Preview JSON</h2>
+<textarea id="json-preview" readonly></textarea>
+</section>
+
+
+<footer>
+<p>Static site — chạy hoàn toàn trên trình duyệt. Deploy trên GitHub Pages.</p>
+</footer>
+</main>
+
+
+<script src="script.js"></script>
+</body>
+</html>
